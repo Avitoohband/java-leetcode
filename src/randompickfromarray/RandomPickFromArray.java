@@ -1,5 +1,7 @@
 package src.randompickfromarray;
 
+import java.util.Random;
+
 public class RandomPickFromArray {
     public static void main(String[] args) {
         int[] arr = new int[]{1, 2, 3, 3, 3};
