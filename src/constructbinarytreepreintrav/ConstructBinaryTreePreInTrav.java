@@ -15,7 +15,6 @@ public class ConstructBinaryTreePreInTrav {
         TreeTrav.preOrder(treeNode);
         // Output: [3,9,20,null,null,15,7]
 
-
     }
 
     public static TreeNode buildTree(int[] preorder, int[] inorder) {
@@ -29,11 +28,15 @@ public class ConstructBinaryTreePreInTrav {
         int mid = inorderList.indexOf(root.val);
 
         root.left = buildTree(
-                preorderList.subList(1, mid + 1).toArray() ,inorderList.subList(0, mid).toArray()
-        )
+                listToIntArray(preorderList.subList(1, mid + 1))
+                ,listToIntArray(inorderList.subList(0, mid))
+        );
 
+        root.right = buildTree(
+                listToIntArray(preorderList.subList(mid + 1, preorder.length))
+                ,listToIntArray(inorderList.subList(mid + 1, inorder.length))
+        );
         return root;
-
     }
 
     private static int[] listToIntArray (List<Integer> list){
@@ -43,24 +46,4 @@ public class ConstructBinaryTreePreInTrav {
         }
         return array;
     }
-
-//    private static TreeNode splitTree(int[] preorder, int[] inorder,
-//                                      Map<Integer, Integer> inorderIndexMap,
-//                                      int rootIndex, int left, int right) {
-//        if (rootIndex > preorder.length - 1) return null;
-//        TreeNode root = new TreeNode(preorder[rootIndex]);
-//
-//
-//        int mid = inorderIndexMap.get(preorder[rootIndex]);
-//
-//        root.left = splitTree(preorder, inorder, inorderIndexMap,
-//                rootIndex + 1, left, right - mid);
-//
-//        root.right = splitTree(preorder, inorder, inorderIndexMap,
-//                rootIndex + 1, left + mid, right
-//        );
-//
-//        return root;
-//
-//    }
 }
