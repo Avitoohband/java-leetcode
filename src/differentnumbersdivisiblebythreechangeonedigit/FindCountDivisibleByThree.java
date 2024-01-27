@@ -3,19 +3,28 @@ package src.differentnumbersdivisiblebythreechangeonedigit;
 public class FindCountDivisibleByThree {
     public static void main(String[] args) {
         String str = "23";
-        int sol = count(str);
+        System.out.println(count(str));
 
     }
 
     public static int count(String str){
-        int sum = 0;
+        int count = 0;
 
-        for (int i = 0; i < str.length(); i++) {
-            sum += str.charAt(i) - 48;
+        int numSum = 0;
+        for (char c : str.toCharArray()) {
+            numSum += (c - 48);
         }
 
-        System.out.println(sum);
+        count += numSum % 3 == 0 ? 1 : 0;
 
-        return 0;
+        for (int i = 0; i < str.length(); i++) {
+            int tempSum = numSum -(str.charAt(i) -48);
+
+            for (int j = 0 ; j <= 9; j++) {
+                count += ((tempSum + j) % 3) == 0 ? 1 : 0;
+            }
+        }
+
+        return count;
     }
 }
