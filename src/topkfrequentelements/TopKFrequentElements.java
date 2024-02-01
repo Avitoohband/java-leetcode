@@ -4,43 +4,35 @@ import java.util.*;
 
 public class TopKFrequentElements {
     public static void main(String[] args) {
-        int[] arr1 = {1, 1, 1, 2, 2, 3};
-        int[] arr2 = {1, 1, 2, 2};
-        int[] arr3 = {1,1,1,1,2,2,3,3,4};
+        int[] nums1 = {1, 1, 1, 2, 2, 3};
+        int[] nums2 = {1, 1, 2, 2};
+        int[] nums3 = {1, 1, 1, 1, 2, 2, 3, 3, 4};
 
 
-        System.out.println(Arrays.toString(freqElements(arr1, 1)));
-        System.out.println(Arrays.toString(freqElements(arr2, 2)));
-        System.out.println(Arrays.toString(freqElements(arr3, 2)));
+        System.out.println(Arrays.toString(freqElements(nums1, 1)));
+        System.out.println(Arrays.toString(freqElements(nums2, 2)));
+        System.out.println(Arrays.toString(freqElements(nums3, 2)));
     }
 
-    public static int[] freqElements(int[] arr, int freq) {
-        List<Integer>[] bucket = new List[arr.length + 1];
+    public static int[] freqElements(int[] nums, int k) {
         Map<Integer, Integer> freqMap = new HashMap<>();
+        List<Integer>[] bucketList = new List[nums.length + 1];
 
-        for (int i : arr) {
-            freqMap.put(i, freqMap.getOrDefault(i, 0) + 1
-            );
+        for (int num : nums) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
         }
 
         for (Integer key : freqMap.keySet()) {
-            int frequency = freqMap.get(key);
-            if(bucket[frequency] == null){
-                bucket[frequency] = new ArrayList<>();
-            }
-            bucket[frequency].add(key);
+            Integer freq = freqMap.get(key);
+            if (bucketList[freq] == null) bucketList[freq] = new ArrayList<>();
+            bucketList[freq].add(key);
         }
 
         List<Integer> res = new ArrayList<>();
-        int counter = 0;
-
-        for (int bucketIndex = bucket.length - 1; bucketIndex >= 0
-                && counter < freq; bucketIndex--) {
-            if(bucket[bucketIndex] != null){
-                counter++;
-                res.addAll(bucket[bucketIndex]);
-            }
+        for (int i = bucketList.length - 1; i >= 0 && res.size() < k; i--) {
+            if (bucketList[i] != null) res.addAll(bucketList[i]);
         }
-        return res.toArray(new int[]);
+
+        return res.stream().mapToInt(num -> num).toArray();
     }
 }
