@@ -11,30 +11,33 @@ public class ShuffleAnArray {
     }
 
     public static class Solution {
-        public int[] nums;
+        private final int[] nums;
+
 
         public Solution(int[] nums) {
             this.nums = nums;
         }
 
         public int[] reset() {
-            return nums;
+           return nums;
         }
 
         public int[] shuffle() {
             int[] shuffled = Arrays.copyOf(nums, nums.length);
+
+
             //Fisher-Yates
-            for (int i = nums.length - 1; i >= 0; i--) {
-                int j = (int) (Math.random() * i);
-                swap(i,j);
+            for (int i = shuffled.length - 1; i > 0; i--) {
+                int j = (int) (Math.random() * (i + 1));
+                swap(shuffled, i, j);
             }
             return  shuffled;
         }
 
-        private void swap(int i, int j) {
-            int temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
+        private void swap(int[] arr, int i, int j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
         }
     }
 }
