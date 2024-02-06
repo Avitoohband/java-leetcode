@@ -1,6 +1,5 @@
 package src.treetrav;
 
-import src.rotatearray.RotateArray;
 import src.util.TreeNode;
 
 public class TreeTrav {

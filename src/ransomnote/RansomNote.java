@@ -1,8 +1,5 @@
 package src.ransomnote;
 
-import java.text.CharacterIterator;
-import java.text.StringCharacterIterator;
-
 public class RansomNote {
     public static void main(String[] args) {
 

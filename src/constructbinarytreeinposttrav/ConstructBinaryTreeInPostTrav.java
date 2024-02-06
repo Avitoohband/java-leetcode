@@ -4,7 +4,6 @@ import src.treetrav.TreeTrav;
 import src.util.TreeNode;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class ConstructBinaryTreeInPostTrav {
     public static void main(String[] args) {

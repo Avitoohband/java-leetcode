@@ -2,7 +2,6 @@ package src.mergetwosortedlists;
 
 import src.util.ListNode;
 
-import javax.swing.plaf.ColorUIResource;
 import java.util.Objects;
 
 public class MergeTwoSortedLists {

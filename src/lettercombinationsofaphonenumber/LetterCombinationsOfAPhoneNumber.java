@@ -1,6 +1,7 @@
 package src.lettercombinationsofaphonenumber;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LetterCombinationsOfAPhoneNumber {
     public static void main(String[] args) {

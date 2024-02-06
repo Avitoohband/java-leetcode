@@ -1,6 +1,5 @@
 package src.constructbinarytreepreposttrav;
 
-import com.sun.source.tree.Tree;
 import src.treetrav.TreeTrav;
 import src.util.TreeNode;
 

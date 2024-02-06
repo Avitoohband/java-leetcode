@@ -1,6 +1,7 @@
 package src.isisomorphic;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class isIsomorphic {
     public static void main(String[] args) {

@@ -1,6 +1,5 @@
 package src.nqueens;
 
-import javax.swing.plaf.BorderUIResource;
 import java.util.*;
 
 public class NQueens {

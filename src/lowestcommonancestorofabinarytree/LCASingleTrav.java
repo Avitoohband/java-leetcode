@@ -2,9 +2,6 @@ package src.lowestcommonancestorofabinarytree;
 
 import src.util.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class LCASingleTrav {
     public static void main(String[] args) {
 
