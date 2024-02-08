@@ -1,4 +1,4 @@
-package src.reversewordsinastring;
+package src.medium.reversewordsinastring;
 
 public class ReverseWordsString {
 
