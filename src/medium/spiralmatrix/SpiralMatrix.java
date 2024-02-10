@@ -13,40 +13,37 @@ public class SpiralMatrix {
     }
 
     public static List<Integer> spiralOrder(int[][] matrix) {
-        List<Integer> res = new ArrayList<>();
+        List<Integer> response = new ArrayList<>();
 
-        int up = 0;
-        int down = matrix.length - 1;
-
-        int left = 0;
-        int right = matrix[0].length - 1;
+        int up = 0, down = matrix.length - 1, left = 0, right = matrix[0].length - 1;
 
         while (up <= down && left <= right) {
-            for (int leftToRight = left; leftToRight <= right; leftToRight++) {
-                res.add(matrix[up][leftToRight]);
+            for (int l = left; l <= right; l++) {
+                response.add(matrix[up][l]);
             }
             up++;
 
-                for (int upToDown = up; upToDown <= down; upToDown++) {
-                    res.add(matrix[upToDown][right]);
-                }
+            for (int u = up; u <= down; u++) {
+                response.add(matrix[u][right]);
+            }
             right--;
 
-            if (left <= right) {
-                for (int rightToLeft = right; rightToLeft >= left; rightToLeft--) {
-                    res.add(matrix[down][rightToLeft]);
+            if (up <= down) {
+                for (int r = right; r >= left; r--) {
+                    response.add(matrix[down][r]);
                 }
             }
             down--;
 
-            if (up <= down) {
-                for (int downToUp = down; downToUp >= up; downToUp--) {
-                    res.add(matrix[downToUp][left]);
+            if (left <= right) {
+                for (int d = down; d >= up; d--) {
+                    response.add(matrix[d][left]);
                 }
             }
             left++;
         }
 
-        return res;
+
+        return response;
     }
 }
