@@ -1,4 +1,4 @@
-package src.ransomnote;
+package src.easy.ransomnote;
 
 public class RansomNote {
     public static void main(String[] args) {
