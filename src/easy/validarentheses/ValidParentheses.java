@@ -1,4 +1,4 @@
-package src.validarentheses;
+package src.easy.validarentheses;
 
 import java.util.Stack;
 
