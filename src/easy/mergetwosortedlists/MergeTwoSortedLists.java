@@ -1,4 +1,4 @@
-package src.mergetwosortedlists;
+package src.easy.mergetwosortedlists;
 
 import src.util.ListNode;
 

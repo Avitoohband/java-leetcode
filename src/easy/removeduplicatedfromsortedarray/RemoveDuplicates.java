@@ -1,4 +1,4 @@
-package src.removeduplicatedfromsortedarray;
+package src.easy.removeduplicatedfromsortedarray;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
