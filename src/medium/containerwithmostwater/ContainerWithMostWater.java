@@ -1,4 +1,4 @@
-package src.containerwithmostwater;
+package src.medium.containerwithmostwater;
 
 public class ContainerWithMostWater {
     public static void main(String[] args) {
