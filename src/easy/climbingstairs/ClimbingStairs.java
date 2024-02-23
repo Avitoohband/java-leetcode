@@ -1,4 +1,4 @@
-package src.climbingstairs;
+package src.easy.climbingstairs;
 
 import java.util.HashMap;
 import java.util.Map;

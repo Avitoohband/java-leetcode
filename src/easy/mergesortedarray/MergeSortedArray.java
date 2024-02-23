@@ -1,4 +1,4 @@
-package src.mergesortedarray;
+package src.easy.mergesortedarray;
 
 public class MergeSortedArray {
     public static void main(String[] args) {
