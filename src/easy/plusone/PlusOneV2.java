@@ -1,10 +1,5 @@
 package src.easy.plusone;
 
-import javax.swing.plaf.synth.SynthStyleFactory;
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class PlusOneV2 {
     public static int[] plusOne(int[] digits) {
         int index = digits.length - 1;
