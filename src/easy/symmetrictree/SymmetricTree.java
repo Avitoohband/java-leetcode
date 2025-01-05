@@ -1,4 +1,4 @@
-package src.symmetrictree;
+package src.easy.symmetrictree;
 
 import src.util.TreeNode;
 

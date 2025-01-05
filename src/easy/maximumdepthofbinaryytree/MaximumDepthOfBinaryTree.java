@@ -1,4 +1,4 @@
-package src.maximumdepthofbinaryytree;
+package src.easy.maximumdepthofbinaryytree;
 
 import src.util.TreeNode;
 
