@@ -1,4 +1,4 @@
-package src.maxbuysellstock;
+package src.easy.maxbuysellstock;
 
 public class MaxBuySellStock {
 

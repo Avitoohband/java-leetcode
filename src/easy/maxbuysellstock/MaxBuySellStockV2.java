@@ -1,4 +1,4 @@
-package src.maxbuysellstock;
+package src.easy.maxbuysellstock;
 
 public class MaxBuySellStockV2 {
     public static void main(String[] args) {
