@@ -1,4 +1,4 @@
-package src.validatebinarysearchtree;
+package src.medium.validatebinarysearchtree;
 
 import src.util.TreeNode;
 
